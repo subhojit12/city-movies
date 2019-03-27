@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>
+      Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+      <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input [(ngModel)]="customer.name"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [(ngModel)]="customer.email"></ion-input>
+      </ion-item><br>
+      <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input [(ngModel)]="customer.password"></ion-input>
+      </ion-item><br>
+      <ion-item>
+          <ion-label position="floating">Address</ion-label>
+          <ion-input [(ngModel)]="customer.address"></ion-input>
+      </ion-item><br>
+      <ion-item>
+          <ion-label position="floating">Phone</ion-label>
+          <ion-input [(ngModel)]="customer.phone"></ion-input>
+      </ion-item><br>
+      <ion-button color="success" expand="block" (click)="addCustomer()">Sign Up</ion-button><br>
+  </ion-card>
+</ion-content>
+
+
+

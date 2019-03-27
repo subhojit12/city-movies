@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>
+      Movies
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+        <ion-slides pager="true">
+          <ion-slide>
+            <img
+              src="https://i1.wp.com/www.tricksworldzz.com/wp-content/uploads/2016/07/paytm-movie-tricksworldzz.in_.png?fit=400%2C200&ssl=1&resize=350%2C200" (click)="goto()">
+          </ion-slide>
+          
+          <ion-slide>
+            <img src="https://i2.wp.com/becleverwithyourcash.com/wp-content/uploads/2017/03/save_now_tv_offers_deals.jpg?fit=800%2C418&ssl=1&resize=350%2C200" (click)="goto()">
+          </ion-slide>
+          
+          <ion-slide>
+            <img src="https://i1.wp.com/www.tricksworldzz.com/wp-content/uploads/2016/08/swiggy-movie-voucher-tricksworldzz.in_.jpg?fit=330%2C202&ssl=1&resize=350%2C200" (click)="goto()">
+          </ion-slide>
+          </ion-slides>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let m of list" size="4">
+        <ion-img src="{{m.image_url}}" (click)="onselect(m)"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
