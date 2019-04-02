@@ -12,6 +12,6 @@ export class PaymentComponent implements OnInit {
 
   ngOnInit() {}
   goto(){
-    this.router.navigate(['/movies']);
+    this.router.navigate(['/payment-done']);
   }
 }

@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
   login(data){
     this.movieService.authenticate(data).subscribe((result)=>{console.log(result);
+      localStorage.setItem('customer',JSON.stringify(result.result))
       if(result.result.password==data.password){
         this.router.navigate(['/movies'])
       }else{

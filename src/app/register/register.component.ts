@@ -20,5 +20,8 @@ export class RegisterComponent implements OnInit {
   addCustomer(){
   	this.movieService.addCustomer(this.customer).subscribe(()=>{this.router.navigate(['/movies']);});
   }
+  goto(){
+    this.router.navigate(['/login'])
+  }
 
 }

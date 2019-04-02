@@ -7,11 +7,13 @@ import { MoviesComponent } from './movies/movies.component';
 import { OffersComponent } from './offers/offers.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { HomescreenComponent } from './homescreen/homescreen.component';
+import { PaymentDoneComponent} from './payment-done/payment-done.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home-screen',
     pathMatch: 'full'
   },
   {
@@ -49,6 +51,14 @@ const routes: Routes = [
   {
     path:'reset-password',
     component:ResetPasswordComponent
+  },
+  {
+    path:'home-screen',
+    component:HomescreenComponent
+  },
+  {
+    path:'payment-done',
+    component:PaymentDoneComponent
   }
 ];
 

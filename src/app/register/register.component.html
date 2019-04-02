@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar color="success">
+    <ion-button href="/home-screen" color="light" style="height: 35px;
+    width: 19%;
+    margin-left: 0;">Back</ion-button>
     <ion-title>
       Register
     </ion-title>
@@ -27,7 +30,7 @@
           <ion-label position="floating">Phone</ion-label>
           <ion-input [(ngModel)]="customer.phone"></ion-input>
       </ion-item><br>
-      <ion-button color="success" expand="block" (click)="addCustomer()">Sign Up</ion-button><br>
+      <ion-button color="success" expand="block" (click)="addCustomer();goto()">Sign Up</ion-button><br>
   </ion-card>
 </ion-content>
 

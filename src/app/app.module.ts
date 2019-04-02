@@ -16,10 +16,12 @@ import { MoviesComponent } from './movies/movies.component';
 import { OffersComponent } from './offers/offers.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { HomescreenComponent } from './homescreen/homescreen.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PaymentDoneComponent } from './payment-done/payment-done.component';
 
 @NgModule({
-  declarations: [AppComponent,LoginComponent,RegisterComponent,BookingComponent,MoviesComponent,OffersComponent,PaymentComponent,ResetPasswordComponent],
+  declarations: [AppComponent,LoginComponent,RegisterComponent,BookingComponent,MoviesComponent,OffersComponent,PaymentComponent,ResetPasswordComponent,HomescreenComponent,PaymentDoneComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
