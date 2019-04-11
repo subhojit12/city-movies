@@ -15,11 +15,13 @@ export class LoginComponent implements OnInit {
     email:'',
     password:''
   }
+  res:any={};
   ngOnInit() {}
   login(data){
     this.movieService.authenticate(data).subscribe((result)=>{console.log(result);
-      localStorage.setItem('customer',JSON.stringify(result.result))
-      if(result.result.password==data.password){
+      this.res=result;
+      localStorage.setItem('customer',JSON.stringify(result))
+      if(this.res.result.password==data.password){
         this.router.navigate(['/movies'])
       }else{
         alert('Wrong Password');

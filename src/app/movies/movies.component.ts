@@ -12,7 +12,8 @@ export class MoviesComponent implements OnInit {
   constructor(private movieService:MoviesService,private router:Router) { }
   list=[];
   ngOnInit() {
-    this.movieService.getMovies().subscribe((result) => {this.list = result;});
+    this.movieService.getMovies().subscribe((result) => {this.list = result;
+    console.log(result)});
   }
   onselect(m){
     this.router.navigate(['/booking/'+m.id]);
