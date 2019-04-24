@@ -1,7 +1,10 @@
 ion-content{
-    --background: url('../../assets/homescreen.png');
-    background-size: cover;
+    --background: url('../../assets/bg1.jpg');
 }
 ion-card{
-    margin-top:50%
+    margin-top:25%;
+    --background:rgba(255,255,255,0.5);
 }
+// ion-toolbar{
+//     color:white
+// }

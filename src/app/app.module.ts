@@ -19,9 +19,13 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PaymentDoneComponent } from './payment-done/payment-done.component';
+import { MenuComponent } from './menu/menu.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BookingHistoryComponent } from './booking-history/booking-history.component';
 
 @NgModule({
-  declarations: [AppComponent,LoginComponent,RegisterComponent,BookingComponent,MoviesComponent,OffersComponent,PaymentComponent,ResetPasswordComponent,HomescreenComponent,PaymentDoneComponent],
+  declarations: [AppComponent,LoginComponent,RegisterComponent,BookingComponent,MoviesComponent,OffersComponent,PaymentComponent,ResetPasswordComponent,HomescreenComponent,PaymentDoneComponent,MenuComponent,ProfileComponent,BookingHistoryComponent
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,

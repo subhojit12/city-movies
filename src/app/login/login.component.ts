@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../movies.service';
 import { Router} from '@angular/router';
-import { ToastController } from '@ionic/angular';
-
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +9,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private movieService:MoviesService,private router:Router,public toastController: ToastController) { }
+  constructor(public alertController: AlertController,private movieService:MoviesService,private router:Router) { }
   data={
     email:'',
     password:''
@@ -24,17 +23,23 @@ export class LoginComponent implements OnInit {
       if(this.res.result.password==data.password){
         this.router.navigate(['/movies'])
       }else{
-        alert('Wrong Password');
-        this.presentToast();
+        this.presentAlert();
+        this.data={
+          email:'',
+          password:''
+        }
       }
     });
   }
-  async presentToast() {
-    const toast = await this.toastController.create({
-      message: 'Your settings have been saved.',
-      duration: 2000
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Login Failed',
+      subHeader: 'Please Enter the correct Credentials',
+      message: 'Try Logging Again.',
+      buttons: ['OK']
     });
-    toast.present();
+
+    await alert.present();
   }
 
 }

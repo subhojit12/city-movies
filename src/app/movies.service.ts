@@ -29,6 +29,15 @@ export class MoviesService {
   authenticate(data){
     return this.http.post(this.loginUrl,data);
   }
+  getCustomerByEmail(email):Observable<[]>{
+    return this.http.get<[]>(this.loginUrl+'/'+email)
+  }
+  updateCustomerPassword(customer):Observable<[]>{
+    return this.http.put<[]>(this.loginUrl+'/'+customer.id,customer);
+  }
+  getBookings():Observable<any>{
+    return this.http.get<[]>(this.bookingUrl)
+  }
   
  
 }

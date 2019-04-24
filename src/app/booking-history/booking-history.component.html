@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Booking History</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-card *ngFor="let b of list" class="center1">
+        <ion-card-header>
+          <ion-card-subtitle>{{b.id}}.{{b.movie_name}}</ion-card-subtitle>
+          <ion-card-subtitle>Theater : {{b.theatre}} </ion-card-subtitle>
+          <ion-card-subtitle>Date : {{b.movie_date | date:'dd/MM/yyy'}}</ion-card-subtitle>
+          <ion-card-subtitle>Tickets : {{b.tickets}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<menu style="margin:0;padding:0"></menu>

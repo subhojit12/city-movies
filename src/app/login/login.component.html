@@ -1,36 +1,38 @@
-<ion-header>
-    <ion-toolbar color="success">
-      <ion-button href="/home-screen" color="light" style="height:35px">Back</ion-button>
-      <ion-title>
-        Login
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-<ion-content>
-  <ion-card>
-    
+<ion-content class="login">
+   <ion-card>
+    <ion-item lines="none">
+      <ion-img src="../assets/CityMovieLogo.png"></ion-img>
+    </ion-item>
     <ion-item>
-      <ion-label position="floating">Email</ion-label>
+      <ion-label position="floating">
+        <ion-icon name="mail">&nbsp;</ion-icon>Email
+      </ion-label>
       <ion-input [(ngModel)]="data.email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input [(ngModel)]="data.password"></ion-input>
+      <ion-label position="floating">
+        <ion-icon name="eye">&nbsp;</ion-icon>Password
+      </ion-label>
+      <ion-input [(ngModel)]="data.password" type="password"></ion-input>
     </ion-item>
     <ion-item>
       <ion-grid>
         <ion-row>
           <ion-col style="height:35px">
-            <ion-button color="success" expand="block"(click)="login(data)">Login</ion-button><br>
+            <ion-button expand="block" color="tertiary" (click)="login(data)">
+              <ion-icon name="log-in"></ion-icon>Login
+            </ion-button><br>
           </ion-col>
           <ion-col style="height:35px">
-            <ion-button color="success" expand="block" href="/register-user">Signup</ion-button>
+            <ion-button expand="block" color="tertiary" href="/register-user">
+              <ion-icon name="person-add"></ion-icon>Signup
+            </ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
-          <h6><a href="/reset-password">Click here to reset password</a></h6>
+          <h6><a href="/reset-password">Forgot your login details?Click here</a></h6>
         </ion-row>
       </ion-grid>
     </ion-item>
-  </ion-card>
+  </ion-card> 
 </ion-content>

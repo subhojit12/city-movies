@@ -1,3 +1,40 @@
 ion-img{
     height:165px;
 }
+ion-content{
+    --background: url('../../assets/bg1.jpg');
+}
+ion-segment-button{   
+    background:#563ada;
+    font-weight:bold; 
+    font-weight: bold;
+    color: #fff;
+  
+  }
+  .gold{
+    color: gold;
+    font-size:24px;
+  }
+  .main{
+    color:#563ada;
+  }
+  .btn-main{
+    background:#563ada !important;
+    font-weight:bold; 
+    font-weight: bold;
+    color: #fff;
+  }
+  .menu{
+    margin:0;
+    padding:0
+  }
+  
+//   .swiper-slide img {
+//     width: 100%;
+//     max-width: 100%;
+//     height: 200px;
+//     max-height: 50%;
+//   }
+  .logout{
+    font-size: 28px;
+  }

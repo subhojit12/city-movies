@@ -9,11 +9,13 @@ import { PaymentComponent } from './payment/payment.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { PaymentDoneComponent} from './payment-done/payment-done.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BookingHistoryComponent } from './booking-history/booking-history.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home-screen',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -59,6 +61,14 @@ const routes: Routes = [
   {
     path:'payment-done',
     component:PaymentDoneComponent
+  },
+  {
+    path:'profile',
+    component:ProfileComponent
+  },
+  {
+    path:'booking-history',
+    component:BookingHistoryComponent
   }
 ];
 

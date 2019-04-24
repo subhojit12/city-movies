@@ -16,6 +16,8 @@ export class RegisterComponent implements OnInit {
   }
   constructor(private movieService:MoviesService,private router:Router) { }
 
+  
+
   ngOnInit() {}
   addCustomer(){
   	this.movieService.addCustomer(this.customer).subscribe(()=>{this.router.navigate(['/movies']);});
